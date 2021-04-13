@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigations"
+    app:startDestination="@id/carFragment">
+
+    <fragment
+        android:id="@+id/carFragment"
+        android:name="ir.ac.iust.mnc.carino.CarFragment"
+        android:label="fragment_car_list"
+        tools:layout="@layout/fragment_car_list" >
+        <action
+            android:id="@+id/action_carFragment_to_carDetailFragment"
+            app:destination="@id/carDetailFragment" />
+        <action
+            android:id="@+id/action_carFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carDetailFragment"
+        android:name="ir.ac.iust.mnc.carino.CarDetailFragment"
+        android:label="fragment_car_detail"
+        tools:layout="@layout/fragment_car_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_carDetailFragment_to_carFragment"
+            app:destination="@id/carFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="ir.ac.iust.mnc.carino.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" >
+        <action
+            android:id="@+id/action_aboutUsFragment_to_carFragment"
+            app:destination="@id/carFragment" />
+    </fragment>
+</navigation>
