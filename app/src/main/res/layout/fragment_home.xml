@@ -5,7 +5,7 @@
     android:id="@+id/layout_car_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CarDetailFragment">
+    tools:context=".fragments.CarDetailFragment">
 
     <TextView
         android:id="@+id/textView2"
