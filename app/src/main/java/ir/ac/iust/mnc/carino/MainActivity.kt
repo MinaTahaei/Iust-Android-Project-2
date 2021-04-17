@@ -7,7 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import ir.ac.iust.mnc.carino.data.Car
 import ir.ac.iust.mnc.carino.utils.InjectorUtils
-import ir.ac.iust.mnc.carino.viewmodel.CarViewModel
+import ir.ac.iust.mnc.carino.viewmodels.CarViewModel
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

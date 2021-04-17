@@ -2,7 +2,7 @@ package ir.ac.iust.mnc.carino.utils
 
 import ir.ac.iust.mnc.carino.data.CarRepository
 import ir.ac.iust.mnc.carino.data.FakeDatabase
-import ir.ac.iust.mnc.carino.viewmodel.CarsViewModelFactory
+import ir.ac.iust.mnc.carino.viewmodels.CarsViewModelFactory
 
 object InjectorUtils {
 

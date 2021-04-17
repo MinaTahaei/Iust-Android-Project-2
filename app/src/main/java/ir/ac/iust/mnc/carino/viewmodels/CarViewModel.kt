@@ -1,4 +1,4 @@
-package ir.ac.iust.mnc.carino.viewmodel
+package ir.ac.iust.mnc.carino.viewmodels
 
 import androidx.lifecycle.ViewModel
 import ir.ac.iust.mnc.carino.data.Car
