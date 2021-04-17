@@ -19,19 +19,8 @@ class MainActivity : AppCompatActivity() {
     private fun initializeUI(){
         val factory = InjectorUtils.provideCarViewModelFactory()
         val viewModel = ViewModelProvider(this, factory).get(CarViewModel::class.java)
-
-        // TODO: Use a proper method for dummy data
+        viewModel.initializeFakeData()
         // TODO: Extend 'Car' class due to project's doc
-        val car1: Car = Car("Ferrari", 12500.0);
-        val car2: Car = Car("Mercedes-Benz", 10500.0);
-        val car3: Car = Car("Aston Martin", 12250.0);
-        val car4: Car = Car("Jack", 11500.0);
-
-        viewModel.addCar(car1)
-        viewModel.addCar(car2)
-        viewModel.addCar(car3)
-        viewModel.addCar(car4)
-
         Log.i("MainActivity", "initializeUI: fetched cars from factory!")
         viewModel.getCars().observe(this, Observer {cars ->
             cars.forEach{car ->
