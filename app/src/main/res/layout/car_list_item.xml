@@ -15,7 +15,7 @@
         >
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/img_car"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="6dp"
