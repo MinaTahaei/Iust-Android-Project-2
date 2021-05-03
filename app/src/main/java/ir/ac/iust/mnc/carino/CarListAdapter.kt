@@ -32,7 +32,7 @@ class CarListAdapter(private val carList: List<Car>): RecyclerView.Adapter<CarLi
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.carTitle.text = carList[position].name
-        holder.carYear.text = carList[position].price.toString()
+        holder.carYear.text = carList[position].year.toString()
     }
 
 }
