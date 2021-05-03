@@ -11,10 +11,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.Nullable
 import androidx.recyclerview.widget.RecyclerView
 import ir.ac.iust.mnc.carino.data.Car
 
-class CarListAdapter(private val carList: List<Car>): RecyclerView.Adapter<CarListAdapter.ViewHolder>() {
+class CarListAdapter(private var carList: List<Car>): RecyclerView.Adapter<CarListAdapter.ViewHolder>() {
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val carTitle: TextView
@@ -63,6 +64,11 @@ class CarListAdapter(private val carList: List<Car>): RecyclerView.Adapter<CarLi
         holder.carTitle.text = carList[position].name
         holder.carYear.text = carList[position].year.toString()
         DownloadImageFromInternet(holder.carImage).execute(carList[position].image_path)
+    }
+
+    fun setCars(cars: List<Car>){
+        this.carList = cars;
+        notifyDataSetChanged()
     }
 
 }

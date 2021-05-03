@@ -1,6 +1,7 @@
 package ir.ac.iust.mnc.carino.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -48,13 +49,18 @@ class HomeFragment : Fragment() {
         list_car = view.findViewById(R.id.list_car)
 
 
+        val carList: List<Car> = emptyList();
         val factory = InjectorUtils.provideCarViewModelFactory()
         val viewModel = ViewModelProvider(this, factory).get(CarViewModel::class.java)
+        list_car.layoutManager = LinearLayoutManager(context)
+        list_car.adapter = CarListAdapter(carList);
 
         viewModel.getCars().observe(viewLifecycleOwner, Observer { cars ->
-            list_car.layoutManager = LinearLayoutManager(context)
-            list_car.adapter = CarListAdapter(cars)
-        })
+            if (cars != null) {
+                if (list_car.adapter != null)
+                    (list_car.adapter as CarListAdapter).setCars(cars = cars)
+            }
+        });
         return view
     }
 
