@@ -27,16 +27,41 @@
          android:layout_weight="0.3"
          android:contentDescription="@string/about_us"
          android:text="@string/about_us"
-         android:textColor="@color/white"
+         android:textColor="@color/purple_200"
          android:textSize="50sp"
          android:layout_marginLeft="15dp" />
-     <ImageView
-         android:id="@+id/Mina"
-         android:layout_width="wrap_content"
-         android:layout_height="0dp"
+
+        <ImageView
+           android:id="@+id/Mina"
+           android:layout_width="100dp"
+           android:layout_marginBottom="20dp"
+           android:layout_height="wrap_content"
+           android:scaleType="fitXY"
+           android:adjustViewBounds="true"
+           android:contentDescription="@string/Mina"
+           android:src="@drawable/me22"
+           android:layout_marginStart="20dp"
+           android:layout_marginLeft="20dp" />
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
          android:layout_weight="0.5"
-         android:contentDescription="@string/Mina"
-         android:src="@drawable/me22" />
+         android:gravity="center_vertical"
+         android:orientation="horizontal">
+         <TextView
+             android:id="@+id/MinDescription"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="15dp"
+             android:layout_marginBottom="150dp"
+             android:layout_weight="0.3"
+             android:contentDescription="@string/mina_tahaei_96522204"
+             android:text="@string/mina_tahaei_96522204"
+             android:textColor="@color/white"
+             android:textSize="25sp"
+             android:layout_marginLeft="20dp" />
+     </LinearLayout>
+
      <LinearLayout
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
@@ -45,6 +70,5 @@
          android:orientation="horizontal">
 
      </LinearLayout>
-
  </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
