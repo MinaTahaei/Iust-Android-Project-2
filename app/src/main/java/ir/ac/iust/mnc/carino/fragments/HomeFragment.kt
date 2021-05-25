@@ -2,10 +2,13 @@ package ir.ac.iust.mnc.carino.fragments
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +18,8 @@ import ir.ac.iust.mnc.carino.R
 import ir.ac.iust.mnc.carino.data.Car
 import ir.ac.iust.mnc.carino.utils.InjectorUtils
 import ir.ac.iust.mnc.carino.viewmodels.CarViewModel
+import kotlinx.android.synthetic.main.activity_main.view.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +33,8 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private lateinit var list_car: RecyclerView
+    private lateinit var listCar: RecyclerView
+    private lateinit var btnAbout: Button
     private var param1: String? = null
     private var param2: String? = null
 
@@ -40,27 +46,42 @@ class HomeFragment : Fragment() {
         }
     }
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
-        list_car = view.findViewById(R.id.list_car)
+        listCar = view.findViewById(R.id.list_car)
+        btnAbout = view.findViewById(R.id.btn_about)
 
 
         val carList: List<Car> = emptyList();
         val factory = InjectorUtils.provideCarViewModelFactory()
         val viewModel = ViewModelProvider(this, factory).get(CarViewModel::class.java)
-        list_car.layoutManager = LinearLayoutManager(context)
-        list_car.adapter = CarListAdapter(carList);
+        listCar.layoutManager = LinearLayoutManager(context)
+        listCar.adapter = CarListAdapter(carList);
 
         viewModel.getCars().observe(viewLifecycleOwner, Observer { cars ->
             if (cars != null) {
-                if (list_car.adapter != null)
-                    (list_car.adapter as CarListAdapter).setCars(cars = cars)
+                if (listCar.adapter != null)
+                    (listCar.adapter as CarListAdapter).setCars(cars = cars)
             }
         });
+
+        btnAbout.setOnClickListener {
+            Log.i("TEST", "About Us Clicked!")
+            val aboutUsFragment = AboutUsFragment();
+            val transaction = activity?.supportFragmentManager?.beginTransaction()
+            if (transaction != null) {
+                transaction.replace(R.id.nav_host_fragment, aboutUsFragment)
+                transaction.addToBackStack(null)
+                transaction.commit()
+            }
+
+        }
         return view
     }
 
