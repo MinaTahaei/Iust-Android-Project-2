@@ -6,9 +6,12 @@
     <string name="Mina">Mina</string>
     <string name="mina_tahaei_96522204">Mina Tahaei, 96522204</string>
     <string name="Ali">Ali</string>
-    <string name="Ali_Ayati_96521056">Ali  Ayati, 96521056</string>
+    <string name="Ali_Ayati_96521056">Ali        Ayati, 96521056</string>
     <string name="choose_your_car">Choose Your Car</string>
     <string name="ford_mustang_1969">Ford Mustang 1969</string>
     <string name="year">Year :</string>
     <string name="_1970">1970</string>
+    <string name="car_details">Car Details</string>
+    <string name="carimage">CarImage</string>
+    <string name="carimage2">carimage2</string>
 </resources>
