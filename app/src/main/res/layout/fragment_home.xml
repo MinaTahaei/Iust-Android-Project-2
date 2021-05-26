@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background"
+    android:background="#111111"
     tools:context=".fragments.CarDetailFragment">
 
     <LinearLayout
@@ -15,23 +15,26 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Choose your car"
-            android:textColor="@color/white"
-            android:textSize="26sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.3"
+            android:contentDescription="@string/choose_your_car"
+            android:text="@string/choose_your_car"
+            android:textColor="@color/purple_200"
+            android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btn_about"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/about_us" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_about"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/about_us" />-->
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
