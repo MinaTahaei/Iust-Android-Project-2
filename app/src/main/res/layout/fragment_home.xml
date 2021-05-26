@@ -34,11 +34,11 @@
 
     <Button
         android:id="@+id/btn_about"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="147dp"
         android:text="@string/about_us"
-        android:layout_marginLeft="147dp" />
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_car"
