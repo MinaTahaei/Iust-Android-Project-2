@@ -72,7 +72,8 @@
         android:textColor="#899095"
         android:textSize="23sp"
         app:layout_constraintLeft_toRightOf="@id/guideline10"
-        app:layout_constraintTop_toBottomOf="@id/guideline11" />
+        app:layout_constraintTop_toBottomOf="@id/guideline11"
+        android:layout_marginStart="5dp" />
 
 
     <TextView
@@ -86,6 +87,18 @@
         android:textSize="23sp"
         app:layout_constraintLeft_toRightOf="@id/guideline13"
         app:layout_constraintTop_toBottomOf="@id/guideline11" />
+    <TextView
+        android:id="@+id/manufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/manufacturer"
+        android:textColor="#899095"
+        android:textSize="23sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline10"
+        app:layout_constraintTop_toBottomOf="@id/guideline14"
+        android:layout_marginStart="5dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -120,6 +133,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_percent="0.6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
