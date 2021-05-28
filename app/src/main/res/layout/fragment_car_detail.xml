@@ -29,8 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/car_list_item_margin_horizontal"
         android:layout_marginVertical="@dimen/car_list_item_margin_vertical"
-        app:layout_constraintTop_toBottomOf="@id/guideline9"
-        >
+        app:layout_constraintTop_toBottomOf="@id/guideline9">
+
         <ImageView
             android:id="@+id/img_car"
             android:layout_width="match_parent"
@@ -48,10 +48,58 @@
             android:src="@drawable/round_circle_foreground" />
     </FrameLayout>
 
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ford_mustang_1969"
+        app:layout_constraintBottom_toTopOf="@id/guideline11"
+        app:layout_constraintLeft_toRightOf="@id/guideline10"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/car_list_item_margin_title"
+        android:layout_marginLeft="@dimen/car_list_item_margin_title"
+        />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/car_list_item_margin_title"
+        android:layout_marginLeft="@dimen/car_list_item_margin_title"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/year"
+        android:textColor="#899095"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-medium"
+        android:text="  1970"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
