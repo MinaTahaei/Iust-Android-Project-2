@@ -62,7 +62,21 @@ class HomeFragment : Fragment() {
         val factory = InjectorUtils.provideCarViewModelFactory()
         val viewModel = ViewModelProvider(this, factory).get(CarViewModel::class.java)
         listCar.layoutManager = LinearLayoutManager(context)
-        listCar.adapter = CarListAdapter(carList);
+        listCar.adapter = CarListAdapter(carList) {
+            Log.i("TEST", "Car " + it + " Clicked")
+            val carDetailFragment = CarDetailFragment();
+            val bundle: Bundle = Bundle();
+            carDetailFragment.arguments = bundle;
+
+            bundle.putInt("car_id", it);
+            val transaction = activity?.supportFragmentManager?.beginTransaction()
+            if (transaction != null) {
+                transaction.replace(R.id.nav_host_fragment, carDetailFragment)
+                transaction.addToBackStack(null)
+                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                transaction.commit()
+            }
+        };
 
         viewModel.getCars().observe(viewLifecycleOwner, Observer { cars ->
             if (cars != null) {

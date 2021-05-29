@@ -8,6 +8,10 @@ class CarRepository private constructor(private val carDao: FakeCarDao){
 
     fun getCars() = carDao.getCars()
 
+    fun getCar(id: Int): Car {
+        return carDao.getCar(id)
+    }
+
     companion object {
         // single-tone
         @Volatile private var instance: CarRepository? = null

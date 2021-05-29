@@ -8,12 +8,16 @@ class CarViewModel(private val carRepository: CarRepository): ViewModel() {
 
     fun getCars() = carRepository.getCars()
 
+    fun getCar(id: Int): Car {
+        return carRepository.getCar(id)
+    }
+
     fun addCar(car: Car) = carRepository.addCar(car)
 
     fun initializeFakeData() {
-        val car1 = Car("Peykan Vanet", 1384, "Peykan", 300000.0,  "https://s100.divarcdn.com/static/pictures/1620035501/AYG22fRN.webp");
-        val car2 = Car("Quick R", 1400, "Sipa", 0.0, "https://s100.divarcdn.com/static/pictures/1620035497/AYPi4BU4.webp");
-        val car3 = Car("Benze Class E 240", 2003, "Mercedes-Benz", 50000.0, "https://s100.divarcdn.com/static/pictures/1620035462/AY9NUTj0.webp");
+        val car1 = Car("Bronco Sport", 2021, "Ford", 30000.0,  "https://public-iust-ai.s3.ir-thr-at1.arvanstorage.com/ford.jpg");
+        val car2 = Car("Escape", 2021, "Ford", 0.0, "https://public-iust-ai.s3.ir-thr-at1.arvanstorage.com/ford2.jpg");
+        val car3 = Car("Yaris", 2020, "Mercedes-Benz", 5000.0, "https://public-iust-ai.s3.ir-thr-at1.arvanstorage.com/2019_toyota_yaris_sedan_xle_fq_oem_1_815.jpg");
 //        val car4: Car = Car("Jack",,,, );
 
         this.addCar(car1)

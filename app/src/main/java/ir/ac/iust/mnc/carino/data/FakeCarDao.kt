@@ -18,4 +18,8 @@ class FakeCarDao {
     }
 
     fun getCars() = cars as LiveData<List<Car>>
+
+    fun getCar(id: Int): Car {
+        return this.carList[id]
+    }
 }
