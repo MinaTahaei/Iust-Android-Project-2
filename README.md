@@ -20,7 +20,7 @@ https://trello.com/invite/b/a6MhXGE8/c61731b161d2ee294a8492340088a78a/android-pr
 ## API Level : 30
 
 ## Project Snippets
-![1](/Snippets/1.png)
-![2](/Snippets/2.png)
-![3](/Snippets/3.png)
-![4](/Snippets/4.png)
+<img src="/Snippets/1.jpg" />
+<img src="/Snippets/2.jpg" />
+<img src="/Snippets/3.jpg" />
+<img src="/Snippets/4.jpg" />
