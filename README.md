@@ -13,5 +13,7 @@ Professor: Dr. Abolfazl Diyanat
 ## Trello
 https://trello.com/invite/b/a6MhXGE8/c61731b161d2ee294a8492340088a78a/android-project-2
 
-[!Screenshot](trello-board.png)
+<p>
+    <img src="trello-board.png" width="240" height="240" />
+</p>
 
