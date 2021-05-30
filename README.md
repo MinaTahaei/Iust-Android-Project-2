@@ -17,3 +17,6 @@ https://trello.com/invite/b/a6MhXGE8/c61731b161d2ee294a8492340088a78a/android-pr
     <img src="trello-board.png" width="240" height="240" />
 </p>
 
+## API Level : 30
+
+## Project Snippets
