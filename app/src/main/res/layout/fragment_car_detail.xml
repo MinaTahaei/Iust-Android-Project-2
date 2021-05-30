@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/_1970"
+        android:text="@string/s1970"
         android:textColor="@color/white"
         android:textSize="23sp"
         app:layout_constraintBottom_toTopOf="@id/guideline15"
