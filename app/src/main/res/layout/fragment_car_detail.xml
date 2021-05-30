@@ -58,9 +58,10 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/guideline11"
+        app:layout_constraintTop_toBottomOf="@id/guideline14"
+        app:layout_constraintBottom_toTopOf="@id/guideline21"
         app:layout_constraintLeft_toRightOf="@id/guideline10"
-        app:layout_constraintTop_toBottomOf="@id/guideline18" />
+         />
 
 
     <TextView
@@ -160,13 +161,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.06" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"
