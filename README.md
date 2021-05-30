@@ -1,4 +1,4 @@
-# Iust-Android-Project-2
+# Iust-Android-Project-2-Group 1
 Mobile Networks Course Project - Iran University of Science and Technology - Phase 2 - Group 1
 
 Contributors:
@@ -9,6 +9,10 @@ Professor: Dr. Abolfazl Diyanat
 
 ## Project 2
 **Creating a list view application with one activity and three fragments**
+Navigation component 1.
+MVVM 2.
+Single Activity Principle 3. 
+RecyclerView 4. 
 
 ## Trello
 https://trello.com/invite/b/a6MhXGE8/c61731b161d2ee294a8492340088a78a/android-project-2
