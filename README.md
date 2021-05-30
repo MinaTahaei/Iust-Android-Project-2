@@ -31,6 +31,9 @@ https://trello.com/invite/b/a6MhXGE8/c61731b161d2ee294a8492340088a78a/android-pr
 
 # Video
 
-https://user-images.githubusercontent.com/35062700/120115686-1b2d2580-c19a-11eb-806f-8c5d7741ebda.mp4
+
+https://user-images.githubusercontent.com/35062700/120115731-50397800-c19a-11eb-88c6-26bcfe9a9fa2.mp4
+
+
 
 
