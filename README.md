@@ -1,5 +1,5 @@
 # Iust-Android-Project-2
-Mobile Networks Course Project - Iran University of Science and Technology - Phase 2
+Mobile Networks Course Project - Iran University of Science and Technology - Phase 2 - Group 1
 
 Contributors:
 * Mina Tahaei, BSc. Computer Engineering - 96522204
